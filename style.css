@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+
+@layer components {
+  .card {
+    @apply rounded-md p-6;
+  }
+
+  .author {
+    @apply flex gap-6 align-middle mb-4;
+  }
+
+  .author__photo {
+    @apply rounded-full border-2 border-white/50 size-10;
+  }
+
+  .author__info {
+    @apply self-center;
+  }
+
+  .author__verification {
+    @apply opacity-50;
+  }
+
+  .text__strong {
+    @apply text-2xl leading-8 font-semibold mb-4;
+  }
+
+  .text__blockquote {
+    @apply opacity-50 before:content-['“'] after:content-['”'];
+  }
+}
