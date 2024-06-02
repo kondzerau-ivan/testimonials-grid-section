@@ -17,6 +17,11 @@ export default {
           },
         };
       },
+      screens(theme) {
+        return {
+          '2xl': '1440px',
+        }
+      }
     },
   },
   plugins: [],

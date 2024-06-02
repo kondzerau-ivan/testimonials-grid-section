@@ -9,8 +9,32 @@ body {
 }
 
 @layer components {
+  body {
+    @apply px-8 py-16 2xl:h-screen 2xl:flex 2xl:items-center;
+  }
+
+  .container {
+    @apply grid gap-8 max-w-[1440px] mx-auto 2xl:grid-cols-4;
+  }
+
   .card {
     @apply rounded-md p-6;
+  }
+
+  .card--white {
+    @apply bg-white text-primary-dark shadow-2xl;
+  }
+
+  .card:first-child {
+    @apply bg-primary text-white bg-[url('/images/bg-pattern-quotation.svg')] bg-no-repeat bg-[right_1.5rem_top] 2xl:col-span-2 2xl:bg-[right_6rem_top];
+  }
+
+  .card:nth-last-child(2) {
+    @apply 2xl:col-span-2;
+  }
+
+  .card:last-child {
+    @apply 2xl:row-span-2 2xl:row-start-1 2xl:col-start-4;
   }
 
   .author {
